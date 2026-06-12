@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DR. MOHAMED IBN CHAMBAS INSTITUTE OF EDUCATION</title>
-  <section>
-    <style>
+  <style>
     :root {
       --primary: #2a5d9f;
       --secondary: #f8b233;
@@ -164,6 +163,85 @@
       background: #1e4781;
     }
 
+    .enrollment-form {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.95rem 1rem;
+      border-radius: 16px;
+      border: 1px solid #d6dce8;
+      background: #fbfcff;
+      font: inherit;
+      color: var(--text);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(42, 93, 159, 0.12);
+    }
+
+    .form-group textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-top: 0.25rem;
+    }
+
+    .form-actions button {
+      min-width: 200px;
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: 999px;
+      padding: 1rem 1.8rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .form-actions button:hover {
+      background: #1e4781;
+      transform: translateY(-1px);
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem 3rem;
@@ -187,7 +265,6 @@
       }
     }
   </style>
-  </section>
 </head>
 <body>
   <header>
@@ -213,6 +290,8 @@
         <div>
           <p><strong>Domicied School</strong> is committed to building a safe, inspiring learning environment for students from elementary through high school. Our dedicated faculty blends academic excellence with character education, preparing learners for the future with confidence and curiosity.</p>
           <p>We foster a culture of teamwork, creativity, and community involvement. Students benefit from rigorous coursework, supportive mentoring, and pubic speech     experience that encourages leadership and lifelong learning.</p>
+          <h3><strong>History</strong></h3>
+          <p> Dr. Mohamed Ibn Chambas Institute Of Education was established in the year 2017 with an enrollment of One Hundred And Six pupils(106) and Nine (9) teacher. it has its vision as "To acquire, demonstrate, articulate and value knowledge and skills that will support them as lifelong learners to participate in, and contribte to the global world, to practice the core values of school that respect, tolerate, and inclusive excellence in all spheres of life, to become the leading educational institution in Northern Ghana with acadamic excellence", it also has its motto as First Among Equals, as a private school it has been registered with the National School Inspectorate Authority (NASIA), Ghana Education Service (GES), Nanumba Municipal Assembly And the Registrar General Dept.</p>
         </div>
         <img src="C:\Users\mikda\Pictures\IMG-20260306-WA0071.jpg" />
       </div>
@@ -232,14 +311,7 @@
           <h3>MISSION</h3>
           <p>Develop the people with active and creative minds to enhance equal opporturnities for all children of school going age, to access quality education from preparatory to second cycle schools through service deliveries (Teaching and Learning) to act independently.</p>
         </article>
-        <article class="feature">
-          <h3>HISTORY</h3>
-          <p>Physical education, team sports, and wellness initiatives build healthy habits and strong teamwork.</p>
-        </article>
-        <article class="feature">
-          <h3>Community Learning</h3>
-          <p>Service projects, clubs, and leadership programs encourage students to engage with their neighborhood and world.</p>
-        </article>
+        
       </div>
     </section>
 
@@ -250,9 +322,8 @@
       </div>
       <p>Prospective families are invited to learn about our admissions process, schedule a campus tour, and find the right grade-level placement. Domicied School welcomes students who are ready to grow academically, socially, and personally.</p>
       <ul>
-        <li>Open enrollment for creche, Nursery,Basic 1-6 and basic 7-9(JHS) </li>
-        <li>Scholarships</li>
-
+        <li>Open enrollment for creche, Nursery, Basic 1-6 and Basic 7-9 (JHS)</li>
+        <li>Scholarships available for qualifying families</li>
       </ul>
       <div class="cta-banner">
         <div>
@@ -260,7 +331,80 @@
           <p>Join a community where every student can thrive.</p>
         </div>
         <button type="button">Apply Now</button>
+        <a href="">Contact</a>
       </div>
+      <form id="enrollment-form" class="enrollment-form" action="/submit" method="post">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="student-name">Student full name</label>
+            <input type="text" id="student-name" name="student_name" placeholder="Kwame Adjei" required />
+          </div>
+          <div class="form-group">
+            <label for="grade-level">Preferred grade</label>
+            <select id="grade-level" name="grade_level" required>
+              <option value="">Select grade</option>
+              <option>Creche</option>
+              <option>Nursery</option>
+              <option>Basic 1</option>
+              <option>Basic 2</option>
+              <option>Basic 3</option>
+              <option>Basic 4</option>
+              <option>Basic 5</option>
+              <option>Basic 6</option>
+              <option>Basic 7 (JHS)</option>
+              <option>Basic 8 (JHS)</option>
+              <option>Basic 9 (JHS)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="birth-date">Date of birth</label>
+            <input type="date" id="birth-date" name="birth_date" required />
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+              <option value="">Select gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="guardian-name">Parent / guardian name</label>
+            <input type="text" id="guardian-name" name="guardian_name" placeholder="Amina Mohammed" required />
+          </div>
+          <div class="form-group">
+            <label for="parent-phone">Phone number</label>
+            <input type="tel" id="parent-phone" name="parent_phone" placeholder="024 548 7555" required />
+          </div>
+          <div class="form-group">
+            <label for="parent-email">Email address</label>
+            <input type="email" id="parent-email" name="parent_email" placeholder="example@mail.com" required />
+          </div>
+          <div class="form-group">
+            <label for="current-school">Current school / class</label>
+            <input type="text" id="current-school" name="current_school" placeholder="Last class attended" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="start-term">Preferred start term</label>
+          <select id="start-term" name="start_term" required>
+            <option value="">Select term</option>
+            <option>First term</option>
+            <option>Second term</option>
+            <option>Third term</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="notes">Additional information</label>
+          <textarea id="notes" name="notes" placeholder="Special needs, questions, or enrollment notes"></textarea>
+        </div>
+        <div id="form-alert" class="form-note" aria-live="polite"></div>
+        <div class="form-actions">
+          <button type="submit">Submit Enrollment</button>
+          <p class="form-note">We will contact you within 2 business days to confirm the next step.</p>
+        </div>
+      </form>
     </section>
 
     <section id="contact" class="card">
@@ -280,7 +424,7 @@
         </div>
         <div class="feature">
           <h3>Address</h3>
-          <p>Bimbilla, Masaka</p>
+          <p>P.O BOX 76,Bimbilla</p>
         </div>
       </div>
     </section>
@@ -289,5 +433,42 @@
   <footer>
     <p>&copy; 2026 Domicied School.First Among Equals.</p>
   </footer>
+
+  <script>
+    const enrollmentForm = document.getElementById('enrollment-form');
+    const formAlert = document.getElementById('form-alert');
+
+    enrollmentForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      formAlert.textContent = 'Submitting application...';
+      formAlert.style.color = 'var(--text)';
+
+      const formData = new FormData(enrollmentForm);
+      const payload = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch(enrollmentForm.action, {
+          method: enrollmentForm.method.toUpperCase(),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          throw new Error(result.error || 'Failed to submit enrollment.');
+        }
+
+        formAlert.textContent = 'Your enrollment application was sent successfully. We will contact you soon.';
+        formAlert.style.color = 'var(--primary)';
+        enrollmentForm.reset();
+      } catch (error) {
+        formAlert.textContent = error.message;
+        formAlert.style.color = '#d23f44';
+      }
+    });
+  </script>
 </body>
 </html>
