@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DR. MOHAMED IBN CHAMBAS INSTITUTE OF EDUCATION</title>
+  <section>
+    <style>
+    :root {
+      --primary: #2a5d9f;
+      --secondary: #f8b233;
+      --background: #f1f4fb;
+      --text: #24314f;
+      --muted: #5a6b8a;
+      --white: #ffffff;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #a30404 70%);
+      color: var(--white);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      letter-spacing: -0.05em;
+    }
+
+    header p {
+      margin: 1rem auto 0;
+      max-width: 720px;
+      font-size: 1.05rem;
+      opacity: 0.92;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.75rem 1.25rem;
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 999px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.16);
+      transform: translateY(-1px);
+    }
+
+    .container {
+      width: min(1140px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 3rem 0 5rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: 0 22px 55px rgba(32, 45, 76, 0.08);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-heading span {
+      display: inline-flex;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      background: var(--secondary);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.75rem, 2.3vw, 2.4rem);
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    .highlight {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .features {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .feature {
+      padding: 1.5rem;
+      border-radius: 20px;
+      border: 1px solid #e4e9f2;
+    }
+
+    .feature h3 {
+      margin: 0 0 0.75rem;
+      font-size: 1.15rem;
+    }
+
+    .cta-banner {
+      background: linear-gradient(90deg, #faf6eb, #f8f7ff 65%);
+      border: 1px solid #e6e9f1;
+      border-radius: var(--radius);
+      padding: 2rem;
+      display: grid;
+      gap: 1rem;
+      align-items: center;
+      grid-template-columns: 1fr auto;
+    }
+
+    .cta-banner button {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: 999px;
+      padding: 1rem 1.8rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .cta-banner button:hover {
+      transform: translateY(-2px);
+      background: #1e4781;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .hero-grid img {
+        width: 100%;
+        border-radius: 28px;
+        max-height: 520px;
+        object-fit: cover;
+      }
+    }
+  </style>
+  </section>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>DR. MOHAMED IBN CHAMBAS INSTITUTE OF EDUCATION</h1>
+      <p>Welcome to the official school website for Dr. Mohamed Ibn Chambas Institute Of Education  (Domicied). Discover our student-centered learning, designed to help every learner thrive.</p>
+      <nav>
+        <a href="#about">About</a>
+        
+        <a href="#admissions">Admissions</a>
+        <a href="tel:0245487555">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <div class="section-heading">
+        <span>01</span>
+        <h2>About Domicied School</h2>
+      </div>
+      <div class="hero-grid">
+        <div>
+          <p><strong>Domicied School</strong> is committed to building a safe, inspiring learning environment for students from elementary through high school. Our dedicated faculty blends academic excellence with character education, preparing learners for the future with confidence and curiosity.</p>
+          <p>We foster a culture of teamwork, creativity, and community involvement. Students benefit from rigorous coursework, supportive mentoring, and pubic speech     experience that encourages leadership and lifelong learning.</p>
+        </div>
+        <img src="C:\Users\mikda\Pictures\IMG-20260306-WA0071.jpg" />
+      </div>
+    </section>
+
+    <section id="programs" class="card">
+      <div class="section-heading">
+        <span>02</span>
+        <h2>ABOUT SCHOOL</h2>
+      </div>
+      <div class="grid features">
+        <article class="feature">
+          <h3>VISION</h3>
+          <p>To acquire, demonstrate, articulate and value knowledge and skills that will support them as lifelong learners to participate in, and contribte to the global world, to practice the core values of school that respect, tolerate, and inclusive excellence in all spheres of life, to become the leading educational institution in Northern Ghana with acadamic excellence.</p>
+        </article>
+        <article class="feature">
+          <h3>MISSION</h3>
+          <p>Develop the people with active and creative minds to enhance equal opporturnities for all children of school going age, to access quality education from preparatory to second cycle schools through service deliveries (Teaching and Learning) to act independently.</p>
+        </article>
+        <article class="feature">
+          <h3>HISTORY</h3>
+          <p>Physical education, team sports, and wellness initiatives build healthy habits and strong teamwork.</p>
+        </article>
+        <article class="feature">
+          <h3>Community Learning</h3>
+          <p>Service projects, clubs, and leadership programs encourage students to engage with their neighborhood and world.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="admissions" class="card">
+      <div class="section-heading">
+        <span>03</span>
+        <h2>Admissions & Enrollment</h2>
+      </div>
+      <p>Prospective families are invited to learn about our admissions process, schedule a campus tour, and find the right grade-level placement. Domicied School welcomes students who are ready to grow academically, socially, and personally.</p>
+      <ul>
+        <li>Open enrollment for creche, Nursery,Basic 1-6 and basic 7-9(JHS) </li>
+        <li>Scholarships</li>
+
+      </ul>
+      <div class="cta-banner">
+        <div>
+          <h3>Start your application today</h3>
+          <p>Join a community where every student can thrive.</p>
+        </div>
+        <button type="button">Apply Now</button>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <div class="section-heading">
+        <span>04</span>
+        <h2>Contact Us</h2>
+      </div>
+      <p>If you have questions or would like to visit campus, our admissions team is ready to help. Reach out by phone, email, or through our online inquiry form.</p>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+        <div class="feature">
+          <h3>Phone</h3>
+          <p>(+233)245487555</p>
+        </div>
+        <div class="feature">
+          <h3>Email</h3>
+          <p>dasoliiknusah@gmail.com</p>
+        </div>
+        <div class="feature">
+          <h3>Address</h3>
+          <p>Bimbilla, Masaka</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Domicied School.First Among Equals.</p>
+  </footer>
+</body>
+</html>
