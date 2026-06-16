@@ -22,46 +22,13 @@ const smtpConfig = process.env.SMTP_HOST
   : null;
 
 const transporter = smtpConfig ? nodemailer.createTransport(smtpConfig) : null;
-const adminSecret = process.env.ADMIN_SECRET || '';
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(root));
 
-function isAdminAuthorized(req) {
-  if (!adminSecret) {
-    return true;
-  }
-  return req.query.secret === adminSecret;
-}
-
 app.get('/', (req, res) => {
   res.sendFile(path.join(root, 'DOMICIED.HTML'));
-});
-
-app.get('/admin', (req, res) => {
-  if (!isAdminAuthorized(req)) {
-    return res.status(401).send('Unauthorized');
-  }
-  res.sendFile(path.join(root, 'admin.html'));
-});
-
-app.get('/api/submissions', async (req, res) => {
-  if (!isAdminAuthorized(req)) {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
-
-  try {
-    const raw = await fs.readFile(submissionFile, 'utf8');
-    const submissions = JSON.parse(raw);
-    return res.json(submissions);
-  } catch (error) {
-    if (error.code === 'ENOENT') {
-      return res.json([]);
-    }
-    console.error('Error reading submissions:', error);
-    return res.status(500).json({ error: 'Unable to read submissions.' });
-  }
 });
 
 async function saveSubmission(data) {
